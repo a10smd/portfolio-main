@@ -14,8 +14,11 @@ const Header = () => {
             Abdus<span className="text-green-400">.</span>
           </h1>
         </Link>
+
         {/* desktop nav */}
-        <Nav />
+        <div className="hidden lg:flex">
+          <Nav />
+        </div>
       </div>
     </header>
   );
