@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 const Header = () => {
   return (
     <header>
-      <div className="container mx-auto">headers</div>
+      <div className="container mx-auto">header yeap</div>
     </header>
   );
 };
