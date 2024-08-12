@@ -1,5 +1,12 @@
+import Link from "next/link";
+import { Button } from "./ui/button";
+
 const Header = () => {
-  return <header>header</header>;
+  return (
+    <header>
+      <div className="container mx-auto">headers</div>
+    </header>
+  );
 };
 
 export default Header;
