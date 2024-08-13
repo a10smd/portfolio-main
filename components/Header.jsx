@@ -15,9 +15,12 @@ const Header = () => {
           </h1>
         </Link>
 
-        {/* desktop nav */}
+        {/* desktop nav & hire me button */}
         <div className="hidden lg:flex">
           <Nav />
+          <Link href="/contact">
+            <Button>Hire Me</Button>
+          </Link>
         </div>
       </div>
     </header>
