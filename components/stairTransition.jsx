@@ -1,5 +1,5 @@
-const stairTransition = () => {
-  return <div>stairTransition</div>;
+const StairTransition = () => {
+  return <div>StairTransition</div>;
 };
 
-export default stairTransition;
+export default StairTransition;
