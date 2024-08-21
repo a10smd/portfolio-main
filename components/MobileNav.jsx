@@ -45,11 +45,11 @@ const MobileNav = () => {
           </Link>
         </div>
         {/* nav links */}
-        <nav>
+        <nav className="flex flex-col justify-center items-center gap-8">
           {Links.map((link, index) => {
             return (
               <Link
-                href={link.path}
+                href={link.link} // Fixed property name
                 key={index}
                 className={`text-xl capitalize hover:text-green-400 transition-all`}
               >
