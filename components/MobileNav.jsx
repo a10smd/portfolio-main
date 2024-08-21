@@ -49,9 +49,12 @@ const MobileNav = () => {
           {Links.map((link, index) => {
             return (
               <Link
-                href={link.link} // Fixed property name
+                href={link.link}
                 key={index}
-                className={`text-xl capitalize hover:text-green-400 transition-all`}
+                className={`${
+                  link.link === pathname &&
+                  "text-green-400 border-b-2 border-green-400"
+                }text-xl capitalize hover:text-green-400 transition-all`}
               >
                 {link.name}
               </Link>
