@@ -1,7 +1,7 @@
-import React from "react";
+"use client";
 
 const MobileNav = () => {
-  return <div>MobileNav</div>;
+  return <nav>MobileNav</nav>;
 };
 
 export default MobileNav;
