@@ -45,7 +45,19 @@ const MobileNav = () => {
           </Link>
         </div>
         {/* nav links */}
-        <nav>nav</nav>
+        <nav>
+          {Links.map((link, index) => {
+            return (
+              <Link
+                href={link.path}
+                key={index}
+                className={`text-xl capitalize hover:text-green-400 transition-all`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
+        </nav>
       </SheetContent>
     </Sheet>
   );
