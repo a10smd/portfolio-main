@@ -11,10 +11,10 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left">
-            <span>Software Engineer</span>
+            <span className="text-xl">Software Engineer</span>
             <h1 className="h1">
               Hi, I'm <br />
-              <span>
+              <span className="text-green-400">
                 <Typewriter
                   words={["Abdus Samad."]}
                   loop={false}
@@ -26,6 +26,11 @@ const Home = () => {
                 />
               </span>
             </h1>
+            <p className="max-w-[500px] mb-9 text-white/80">
+              I'm a skilled Software Engineer specializing in website
+              development, with proficiency in multiple technologies and
+              languages.
+            </p>
           </div>
           {/* photo */}
           <div>photo</div>
