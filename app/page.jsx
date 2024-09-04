@@ -32,11 +32,16 @@ const Home = () => {
               languages.
             </p>
             {/* button and social */}
-            <div>
-              <Button>
+            <div className="flex flex-col xl:flex-row items-center gap-8">
+              <Button
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+              >
                 <span>Download CV</span>
-                <FiDownload />
+                <FiDownload className="text-xl" />
               </Button>
+              <div className="mb-8 xl:mb-0"></div>
             </div>
           </div>
           {/* photo */}
