@@ -45,7 +45,12 @@ const Home = () => {
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Social />
+                <Social
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-green-400 rounded-full flex
+justify-center items-center text-green-400 text-base hover:bg-green-400
+hover: text-primary hover: transition-all duration-500"
+                />
               </div>
             </div>
           </div>
