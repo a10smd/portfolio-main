@@ -1,12 +1,14 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 // Define an array of social icons and their respective paths
 const socials = [
   { icon: <FaGithub />, path: "https://github.com/a10smd" },
   { icon: <FaLinkedinIn />, path: "www.linkedin.com/in/abdus-samad-5a5171225" },
-  { icon: <FaYoutube />, path: "https://youtube.com/your-channel" },
-  { icon: <FaTwitter />, path: "https://twitter.com/your-handle" },
+  {
+    icon: <FaInstagram />,
+    path: "https://www.instagram.com/as_30ae?igsh=NTc4MTIwNjQ2YQ==",
+  },
 ];
 
 const Social = ({ containerStyles, iconStyles }) => {
