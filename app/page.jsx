@@ -4,6 +4,9 @@ import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
 import { Typewriter } from "react-simple-typewriter";
 
+//components
+import Social from "@/components/Social";
+
 const Home = () => {
   return (
     <section className="h-full">
@@ -41,7 +44,9 @@ const Home = () => {
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
-              <div className="mb-8 xl:mb-0"></div>
+              <div className="mb-8 xl:mb-0">
+                <Social />
+              </div>
             </div>
           </div>
           {/* photo */}
