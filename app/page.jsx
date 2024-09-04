@@ -16,7 +16,7 @@ const Home = () => {
               Hi, I'm <br />
               <span className="text-green-400">
                 <Typewriter
-                  words={["Abdus Samad ."]}
+                  words={["Abdus Samad."]}
                   loop={false}
                   cursor
                   cursorStyle="_"
