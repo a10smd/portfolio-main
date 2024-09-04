@@ -30,7 +30,7 @@ const Photo = () => {
             className="object-contain"
           />
         </motion.div>
-        {/* square */}
+        {/* glowing square */}
         <motion.svg
           className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
           fill="transparent"
@@ -46,13 +46,16 @@ const Photo = () => {
             strokeWidth="4"
             strokeLinecap="round"
             strokeLinejoin="round"
+            style={{
+              filter: "drop-shadow(0 0 10px #00ff99)",
+            }}
             initial={{ strokeDasharray: "0 2000" }}
             animate={{
               strokeDasharray: ["2000 0", "0 2000"],
               rotate: [0, 0],
             }}
             transition={{
-              duration: 5,
+              duration: 10,
               repeat: Infinity,
               repeatType: "reverse",
             }}
