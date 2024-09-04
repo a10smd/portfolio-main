@@ -32,6 +32,12 @@ const Home = () => {
               languages.
             </p>
             {/* button and social */}
+            <div>
+              <Button>
+                <span>Download CV</span>
+                <FiDownload />
+              </Button>
+            </div>
           </div>
           {/* photo */}
           <div>photo</div>
