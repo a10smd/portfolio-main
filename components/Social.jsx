@@ -4,10 +4,13 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 // Define an array of social icons and their respective paths
 const socials = [
   { icon: <FaGithub />, path: "https://github.com/a10smd" },
-  { icon: <FaLinkedinIn />, path: "www.linkedin.com/in/abdus-samad-5a5171225" },
+  {
+    icon: <FaLinkedinIn />,
+    path: "https://www.linkedin.com/in/abdus-samad-5a5171225",
+  },
   {
     icon: <FaInstagram />,
-    path: "https://www.instagram.com/as_30ae?igsh=NTc4MTIwNjQ2YQ==",
+    path: "https://www.instagram.com/as_30ae?igshid=NTc4MTIwNjQ2YQ==",
   },
 ];
 
