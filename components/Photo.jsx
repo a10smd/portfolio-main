@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+
 const Photo = () => {
   return (
     <div className="w-full h-full relative">
@@ -11,10 +12,7 @@ const Photo = () => {
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
       >
-        <div
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-
-[498px] mix-blend-lighten"
-        >
+        <div className="w-[398px] h-[398px] xl:w-[598px] xl:h-[598px] mix-blend-lighten">
           <Image
             src="/assets/photo.png"
             priority
