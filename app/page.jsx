@@ -31,6 +31,7 @@ const Home = () => {
               development, with proficiency in multiple technologies and
               languages.
             </p>
+            {/* button and social */}
           </div>
           {/* photo */}
           <div>photo</div>
