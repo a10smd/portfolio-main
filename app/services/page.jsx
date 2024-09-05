@@ -11,16 +11,16 @@ const services = [
   },
   {
     num: "01",
-    title: "Web Development",
+    title: "Frontend Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Frontend developer specializing in creating dynamic web applications, primarily using Next.js.",
     href: "",
   },
   {
     num: "01",
-    title: "Web Development",
+    title: "UI/UX Designer",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Frontend developer and UI/UX designer, specializing in creating seamless web experiences, primarily using Next.js.",
     href: "",
   },
 ];
