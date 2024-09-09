@@ -31,6 +31,7 @@ const services = [
 const Services = () => {
   // Track hover state for each service
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [floating, setFloating] = useState(false);
 
   return (
     <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
@@ -52,8 +53,14 @@ const Services = () => {
                   <Link href={service.href}>
                     {/* Animate the icon transition */}
                     <span
-                      onMouseEnter={() => setHoveredIndex(index)}
-                      onMouseLeave={() => setHoveredIndex(null)}
+                      onMouseEnter={() => {
+                        setHoveredIndex(index);
+                        setFloating(true);
+                      }}
+                      onMouseLeave={() => {
+                        setHoveredIndex(null);
+                        setFloating(false);
+                      }}
                       className="inline-block mb-4"
                     >
                       <AnimatePresence initial={false}>
@@ -61,10 +68,22 @@ const Services = () => {
                           <motion.div
                             key="right-arrow"
                             initial={{ x: -20, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
+                            animate={{
+                              x: 0,
+                              opacity: 1,
+                              y: floating ? [0, -4, 0] : 0, // Floating animation
+                            }}
                             exit={{ x: 20, opacity: 0 }}
-                            transition={{ duration: 0.4, ease: "easeOut" }}
-                            style={{ position: "absolute", fontSize: "1.3rem" }} // Increased size
+                            transition={{
+                              duration: 0.4,
+                              ease: "easeOut",
+                              y: {
+                                repeat: floating ? Infinity : 0,
+                                repeatType: "reverse",
+                                duration: 0.6,
+                              },
+                            }}
+                            style={{ position: "absolute", fontSize: "1.5rem" }} // Increased size
                           >
                             <BsArrowRight />
                           </motion.div>
@@ -75,7 +94,7 @@ const Services = () => {
                             animate={{ x: 0, y: 0, opacity: 1 }}
                             exit={{ x: 20, y: 20, opacity: 0 }}
                             transition={{ duration: 0.4, ease: "easeOut" }}
-                            style={{ position: "absolute", fontSize: "1.3rem" }} // Increased size
+                            style={{ position: "absolute", fontSize: "1.5rem" }} // Increased size
                           >
                             <BsArrowDownRight />
                           </motion.div>
