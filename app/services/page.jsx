@@ -10,21 +10,27 @@ const services = [
     href: "",
   },
   {
-    num: "01",
+    num: "02",
     title: "Frontend Development",
     description:
       "Frontend developer specializing in creating dynamic web applications, primarily using Next.js.",
     href: "",
   },
   {
-    num: "01",
+    num: "03",
     title: "UI/UX Designer",
     description:
       "Frontend developer and UI/UX designer, specializing in creating seamless web experiences, primarily using Next.js.",
     href: "",
   },
 ];
+
+import { motion } from "framer-motion";
 const Services = () => {
-  return <div>services page</div>;
+  return (
+    <section>
+      <div className="container mx-auto">Service Page</div>
+    </section>
+  );
 };
 export default Services;
