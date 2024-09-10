@@ -52,7 +52,9 @@ const Services = () => {
               >
                 {/* top */}
                 <div className="w-full flex justify-between items-center">
-                  <div className="text-5xl font-extrabold">{service.num}</div>
+                  <div className="text-5xl font-extrabold text-outline text-transparent">
+                    {service.num}
+                  </div>
                   <Link href={service.href}>
                     {/* Animate the icon transition */}
                     <span
