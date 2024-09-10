@@ -51,8 +51,8 @@ const Services = () => {
                 className="flex-1 flex flex-col justify-center gap-2 group"
               >
                 {/* top */}
-                <div>
-                  <div>{service.num}</div>
+                <div className="w-full flex justify-between items-center">
+                  <div className="text-5xl font-extrabold">{service.num}</div>
                   <Link href={service.href}>
                     {/* Animate the icon transition */}
                     <span
