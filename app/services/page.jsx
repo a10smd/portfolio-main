@@ -46,7 +46,10 @@ const Services = () => {
         >
           {services.map((service, index) => {
             return (
-              <div key={index}>
+              <div
+                key={index}
+                className="flex-1 flex flex-col justify-center gap-2 group"
+              >
                 {/* top */}
                 <div>
                   <div>{service.num}</div>
