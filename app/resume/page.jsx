@@ -5,7 +5,7 @@ import {
   FaJs,
   FaReact,
   FaFigma,
-  FaNodeJs, // Corrected here
+  FaNodeJs,
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
@@ -47,6 +47,26 @@ const about = {
     {
       fieldName: "Languages",
       fieldValue: "English, Urdu/Hindi",
+    },
+  ],
+};
+
+// experience data
+const experience = {
+  icon: "/assets/resume/badge.svg",
+  title: "My experience",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  items: [
+    {
+      company: "Acooa FZE.",
+      position: "Sales Promoter",
+      duration: "Jan 2023 - Present", // Fixed the duration field
+    },
+    {
+      company: "ISD Global",
+      position: "UI/UX Designer/Frontend Developer & App Developer",
+      duration: "Aug 2021 - Dec 2022",
     },
   ],
 };
