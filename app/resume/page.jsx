@@ -44,6 +44,10 @@ const about = {
       fieldName: "Freelance",
       fieldValue: "Available",
     },
+    {
+      fieldName: "Languages",
+      fieldValue: "English, Urdu/Hindi",
+    },
   ],
 };
 
