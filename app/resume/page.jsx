@@ -71,6 +71,37 @@ const experience = {
   ],
 };
 
+// education data
+const education = {
+  icon: "/assets/resume/cap.svg",
+  title: "My education",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  items: [
+    {
+      institute: "Arab Unity School",
+      Degree:
+        "Cambridge International General Certificate of Secondary Education",
+      duration: "2020-2021",
+    },
+    {
+      institute: "University of Bolton",
+      Degree: "Diploma in Business",
+      duration: "2020-2021",
+    },
+    {
+      institute: "University of Bolton",
+      Degree: "Bsc. (Hons) in Computing",
+      duration: "2021-2023",
+    },
+    {
+      institute: "University of Bolton",
+      Degree: "BEng. (Hons) in Software Engineering",
+      duration: "2023-2024",
+    },
+  ],
+};
+
 const Resume = () => {
   return <div>resume page</div>;
 };
