@@ -14,7 +14,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "I am Abdus Samad, a skilled frontend developer and UI/UX designer with a year of experience. I specialize in building responsive and dynamic web applications using modern technologies like Next.js. I am also available for freelance work.",
   info: [
     {
       fieldName: "Name",
@@ -56,7 +56,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Throughout my career, I've gained hands-on experience working as a UI/UX designer and frontend developer, focusing on creating seamless user experiences and building modern web applications.",
   items: [
     {
       company: "ISD Global",
@@ -66,7 +66,7 @@ const experience = {
     {
       company: "Acooa Life FZE.",
       position: "Sales Promoter",
-      duration: "Nov 2023 - Nov 2023",
+      duration: "Nov 2023",
     },
   ],
 };
@@ -76,7 +76,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "My academic background has provided me with a strong foundation in both business and computing, which complements my work in frontend development and UI/UX design.",
   items: [
     {
       institute: "Arab Unity School",
@@ -91,7 +91,7 @@ const education = {
     },
     {
       institute: "University of Bolton",
-      Degree: "Bsc. (Hons) in Computing",
+      Degree: "BSc. (Hons) in Computing",
       duration: "2021-2023",
     },
     {
@@ -106,39 +106,67 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "I possess a wide range of technical skills that help me create dynamic and efficient applications. Below are some of the key tools and technologies I use in my work.",
   skillList: [
     {
       icon: <FaHtml5 />,
-      name: "html 5",
+      name: "HTML 5",
     },
     {
       icon: <FaCss3 />,
-      name: "css 3",
+      name: "CSS 3",
     },
     {
       icon: <FaJs />,
-      name: "javascript",
+      name: "JavaScript",
     },
     {
       icon: <FaReact />,
-      name: "react",
+      name: "React",
     },
     {
       icon: <FaFigma />,
-      name: "figma",
+      name: "Figma",
     },
     {
       icon: <FaNodeJs />,
-      name: "node js",
+      name: "Node.js",
     },
     {
       icon: <SiTailwindcss />,
-      name: "tailwind css",
+      name: "Tailwind CSS",
     },
     {
       icon: <SiNextdotjs />,
-      name: "next js",
+      name: "Next.js",
+    },
+    {
+      icon: <FaReact />,
+      name: "React Native", // Added for app development
+    },
+    {
+      icon: <FaJs />,
+      name: "TypeScript", // Popular for frontend development
+    },
+    {
+      icon: <FaReact />,
+      name: "Redux", // State management for frontend
+    },
+    {
+      icon: <FaFigma />,
+      name: "Adobe XD", // Added for UI/UX design
+    },
+    {
+      icon: <FaCss3 />,
+      name: "SCSS", // Preprocessor for advanced CSS
+    },
+    {
+      icon: <FaCss3 />,
+      name: "Styled Components", // For styling in React apps
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "Express.js", // Backend framework often used with Node.js
     },
   ],
 };
