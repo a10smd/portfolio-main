@@ -64,7 +64,7 @@ const experience = {
       duration: "Sep 2023 - Present",
     },
     {
-      company: "Acooa FZE.",
+      company: "Acooa Life FZE.",
       position: "Sales Promoter",
       duration: "Nov 2023 - Nov 2023",
     },
