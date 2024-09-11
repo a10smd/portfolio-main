@@ -59,14 +59,14 @@ const experience = {
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
   items: [
     {
-      company: "Acooa FZE.",
-      position: "Sales Promoter",
-      duration: "Jan 2023 - Present", // Fixed the duration field
-    },
-    {
       company: "ISD Global",
       position: "UI/UX Designer/Frontend Developer & App Developer",
-      duration: "Aug 2021 - Dec 2022",
+      duration: "Sep 2023 - Present",
+    },
+    {
+      company: "Acooa FZE.",
+      position: "Sales Promoter",
+      duration: "Nov 2023 - Nov 2023",
     },
   ],
 };
