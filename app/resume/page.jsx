@@ -20,6 +20,30 @@ const about = {
       fieldName: "Name",
       fieldValue: "Abdus Samad",
     },
+    {
+      fieldName: "Phone",
+      fieldValue: "(+971) 054 578 9975",
+    },
+    {
+      fieldName: "Experience",
+      fieldValue: "1 Year",
+    },
+    {
+      fieldName: "Github",
+      fieldValue: "a10smd",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Pakistan",
+    },
+    {
+      fieldName: "Email",
+      fieldValue: "abdussamada11d8@gmail.com",
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Available",
+    },
   ],
 };
 
