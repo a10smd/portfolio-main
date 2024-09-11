@@ -82,7 +82,7 @@ const education = {
       institute: "Arab Unity School",
       Degree:
         "Cambridge International General Certificate of Secondary Education",
-      duration: "2020-2021",
+      duration: "2013-2020",
     },
     {
       institute: "University of Bolton",
@@ -98,6 +98,47 @@ const education = {
       institute: "University of Bolton",
       Degree: "BEng. (Hons) in Software Engineering",
       duration: "2023-2024",
+    },
+  ],
+};
+
+// skills data
+const skills = {
+  title: "My skills",
+  description:
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  skillList: [
+    {
+      icon: <FaHtml5 />,
+      name: "html 5",
+    },
+    {
+      icon: <FaCss3 />,
+      name: "css 3",
+    },
+    {
+      icon: <FaJs />,
+      name: "javascript",
+    },
+    {
+      icon: <FaReact />,
+      name: "react",
+    },
+    {
+      icon: <FaFigma />,
+      name: "figma",
+    },
+    {
+      icon: <FaNodeJs />,
+      name: "node js",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "tailwind css",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "next js",
     },
   ],
 };
