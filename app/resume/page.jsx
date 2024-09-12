@@ -10,6 +10,16 @@ import {
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
+
 // about data
 const about = {
   title: "About me",
@@ -171,25 +181,17 @@ const skills = {
   ],
 };
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { motion } from "framer-motion";
-
 const Resume = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
+      initial={{ opacity: 0, scale: 0.9 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        scale: 1,
+        transition: { delay: 0.4, duration: 0.6, ease: "easeOut" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.4 } }}
+      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0 bg-primary"
     >
       <div className="container mx-auto">
         <Tabs
@@ -197,29 +199,171 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger
+              value="experience"
+              className="p-4 bg-gray-800 text-white rounded-lg shadow-lg transform transition-transform hover:scale-110 active:scale-100"
+            >
+              Experience
+            </TabsTrigger>
+            <TabsTrigger
+              value="education"
+              className="p-4 bg-gray-800 text-white rounded-lg shadow-lg transform transition-transform hover:scale-110 active:scale-100"
+            >
+              Education
+            </TabsTrigger>
+            <TabsTrigger
+              value="skills"
+              className="p-4 bg-gray-800 text-white rounded-lg shadow-lg transform transition-transform hover:scale-110 active:scale-100"
+            >
+              Skills
+            </TabsTrigger>
+            <TabsTrigger
+              value="about"
+              className="p-4 bg-gray-800 text-white rounded-lg shadow-lg transform transition-transform hover:scale-110 active:scale-100"
+            >
+              About me
+            </TabsTrigger>
           </TabsList>
 
-          {/* Content */}
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience">
-              {/* Experience content goes here */}
-              Experience
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="flex flex-col gap-[60px] text-center xl:text-left"
+              >
+                <h3 className="text-6xl font-extrabold text-white">
+                  {experience.title}
+                </h3>
+                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg">
+                  {experience.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
+                    {experience.items.map((item, index) => (
+                      <motion.li
+                        key={index}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -30 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
+                        className="bg-gray-800 p-6 rounded-lg shadow-2xl transform transition-transform hover:scale-105"
+                      >
+                        <h4 className="text-3xl font-bold mb-4 text-gray-100">
+                          {item.position}
+                        </h4>
+                        <p className="text-gray-300">
+                          {item.company} - {item.duration}
+                        </p>
+                        <p className="text-gray-300">{item.description}</p>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </ScrollArea>
+              </motion.div>
             </TabsContent>
+
             <TabsContent value="education">
-              {/* Education content goes here */}
-              Education
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.6 }}
+                className="bg-gray-800 p-8 rounded-lg shadow-2xl"
+              >
+                <h3 className="text-6xl font-extrabold text-white">
+                  {education.title}
+                </h3>
+                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg mb-8">
+                  {education.description}
+                </p>
+                <ul className="space-y-6">
+                  {education.items.map((item, index) => (
+                    <motion.li
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.4, delay: index * 0.2 }}
+                      className="flex flex-col"
+                    >
+                      <h4 className="text-3xl font-bold text-gray-100">
+                        {item.Degree}
+                      </h4>
+                      <p className="text-gray-300">{item.institute}</p>
+                      <p className="text-gray-300">{item.duration}</p>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
             </TabsContent>
+
             <TabsContent value="skills">
-              {/* Skills content goes here */}
-              Skills
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.6 }}
+                className="bg-gray-800 p-8 rounded-lg shadow-2xl"
+              >
+                <h3 className="text-6xl font-extrabold text-white">
+                  {skills.title}
+                </h3>
+                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg mb-8">
+                  {skills.description}
+                </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                  {skills.skillList.map((skill, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center space-x-4 p-4 bg-gray-800 rounded-lg shadow-lg transform transition-transform hover:scale-105"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                    >
+                      <div className="text-3xl text-white">{skill.icon}</div>
+                      <p className="text-lg text-gray-100">{skill.name}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             </TabsContent>
+
             <TabsContent value="about">
-              {/* About content goes here */}
-              About
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.6 }}
+                className="bg-gray-800 p-8 rounded-lg shadow-2xl"
+              >
+                <h3 className="text-6xl font-extrabold text-white">
+                  {about.title}
+                </h3>
+                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg mb-8">
+                  {about.description}
+                </p>
+                <ul className="space-y-4">
+                  {about.info.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex justify-between text-gray-300"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                    >
+                      <span className="font-bold text-gray-100">
+                        {item.fieldName}:
+                      </span>
+                      <span>{item.fieldValue}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             </TabsContent>
           </div>
         </Tabs>
