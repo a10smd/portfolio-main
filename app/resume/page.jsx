@@ -202,22 +202,26 @@ const Resume = () => {
             <TabsTrigger value="skills">Skills</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
-          <TabsContent value="experience">
-            {/* Experience content goes here */}
-            Experience
-          </TabsContent>
-          <TabsContent value="education">
-            {/* Education content goes here */}
-            Education
-          </TabsContent>
-          <TabsContent value="skills">
-            {/* Skills content goes here */}
-            Skills
-          </TabsContent>
-          <TabsContent value="about">
-            {/* About content goes here */}
-            About
-          </TabsContent>
+
+          {/* Content */}
+          <div className="min-h-[70vh] w-full">
+            <TabsContent value="experience">
+              {/* Experience content goes here */}
+              Experience
+            </TabsContent>
+            <TabsContent value="education">
+              {/* Education content goes here */}
+              Education
+            </TabsContent>
+            <TabsContent value="skills">
+              {/* Skills content goes here */}
+              Skills
+            </TabsContent>
+            <TabsContent value="about">
+              {/* About content goes here */}
+              About
+            </TabsContent>
+          </div>
         </Tabs>
       </div>
     </motion.div>
