@@ -24,8 +24,8 @@ const projects = [
     description:
       "Emirates Delight is an online food delivery service that offers a variety of cuisines from all over the world. The platform was created using Next.js, React, and Tailwind CSS.",
     stack: [{ name: "Next.js" }, { name: "React" }, { name: "Tailwind CSS" }],
-    live: "",
-    github: "",
+    live: "https://emirates-delight.vercel.app/",
+    github: "https://github.com/a10smd/emirates-delight",
   },
 ];
 
