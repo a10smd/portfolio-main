@@ -13,6 +13,8 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "@/components/ui/tooltip";
+import Link from "next/link";
+import Image from "next/image";
 
 const Work = () => {
   return <div>Work</div>;
