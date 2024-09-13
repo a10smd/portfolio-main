@@ -23,7 +23,12 @@ const projects = [
     title: "Emirates Delight",
     description:
       "Emirates Delight is an online food delivery service that offers a variety of cuisines from all over the world. The platform was created using Next.js, React, and Tailwind CSS.",
-    stack: [{ name: "Next.js" }, { name: "React" }, { name: "Tailwind CSS" }],
+    stack: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "Tailwind CSS" },
+      { name: "Node js" },
+    ],
     live: "https://emirates-delight.vercel.app/",
     github: "https://github.com/a10smd/emirates-delight",
   },
@@ -40,6 +45,7 @@ const projects = [
 ];
 
 const Work = () => {
+  const [project, setProject] = useState(projects[0]);
   return <div>Work</div>;
 };
 
