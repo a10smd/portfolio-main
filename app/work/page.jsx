@@ -32,7 +32,7 @@ const projects = [
     category: "frontend",
     title: "Admin Panel",
     description:
-      "Admin Panel is an online food delivery service that offers a variety of cuisines from all over the world. The platform was created using Next.js, React, and Tailwind CSS.",
+      "Admin Panel is a web application that allows users to manage their data. The platform was created using Next.js, React, and Tailwind CSS.",
     stack: [{ name: "Next.js" }, { name: "React" }, { name: "Tailwind CSS" }],
     live: "",
     github: "https://github.com/a10smd/Admin-panel",
