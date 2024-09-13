@@ -11,12 +11,6 @@ import {
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 
@@ -199,22 +193,19 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            {["experience", "education", "skills", "about"].map(
-              (value, index) => (
-                <TabsTrigger
-                  key={value}
-                  value={value}
-                  className="p-4 bg-gray-800 text-white rounded-lg shadow-lg transform transition-transform hover:scale-110 active:scale-100"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {value.charAt(0).toUpperCase() + value.slice(1)}
-                </TabsTrigger>
-              )
-            )}
+            {["experience", "education", "skills", "about"].map((value) => (
+              <TabsTrigger
+                key={value}
+                value={value}
+                className="p-4 bg-gray-800 text-white rounded-lg shadow-lg transform transition-transform hover:scale-110 active:scale-100"
+              >
+                {value.charAt(0).toUpperCase() + value.slice(1)}
+              </TabsTrigger>
+            ))}
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
+            {/* Experience Tab */}
             <TabsContent value="experience">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
@@ -230,6 +221,7 @@ const Resume = () => {
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[400px]">
+                  {/* Experience Content */}
                   <motion.ul
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -240,11 +232,11 @@ const Resume = () => {
                     {experience.items.map((item, index) => (
                       <motion.li
                         key={index}
+                        className="bg-gray-800 p-6 rounded-lg shadow-2xl transform transition-transform hover:scale-105"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -30 }}
                         transition={{ duration: 0.5, delay: index * 0.3 }}
-                        className="bg-gray-800 p-6 rounded-lg shadow-2xl transform transition-transform hover:scale-105"
                       >
                         <h4 className="text-3xl font-bold mb-4 text-gray-100">
                           {item.position}
@@ -252,7 +244,6 @@ const Resume = () => {
                         <p className="text-gray-300">
                           {item.company} - {item.duration}
                         </p>
-                        <p className="text-gray-300">{item.description}</p>
                       </motion.li>
                     ))}
                   </motion.ul>
@@ -260,116 +251,127 @@ const Resume = () => {
               </motion.div>
             </TabsContent>
 
+            {/* Education Tab */}
             <TabsContent value="education">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gray-800 p-8 rounded-lg shadow-2xl"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="flex flex-col gap-[60px] text-center xl:text-left"
               >
                 <h3 className="text-6xl font-extrabold text-white drop-shadow-lg">
                   {education.title}
                 </h3>
-                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg mb-8">
+                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg">
                   {education.description}
                 </p>
-                <motion.ul
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="space-y-6"
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-gray-800 p-8 rounded-lg shadow-2xl"
                 >
-                  {education.items.map((item, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -20 }}
-                      transition={{ duration: 0.4, delay: index * 0.2 }}
-                      className="flex flex-col bg-gray-700 p-4 rounded-lg shadow-md"
-                    >
-                      <h4 className="text-3xl font-bold text-gray-100">
-                        {item.Degree}
-                      </h4>
-                      <p className="text-gray-300">{item.institute}</p>
-                      <p className="text-gray-300">{item.duration}</p>
-                    </motion.li>
-                  ))}
-                </motion.ul>
+                  <ul className="space-y-6">
+                    {education.items.map((item, index) => (
+                      <motion.li
+                        key={index}
+                        className="flex flex-col bg-gray-700 p-4 rounded-lg shadow-md"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.3 }}
+                      >
+                        <h4 className="text-2xl font-bold text-white">
+                          {item.Degree}
+                        </h4>
+                        <p className="text-gray-300">
+                          {item.institute} - {item.duration}
+                        </p>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
               </motion.div>
             </TabsContent>
 
+            {/* Skills Tab */}
             <TabsContent value="skills">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gray-800 p-8 rounded-lg shadow-2xl"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="flex flex-col gap-[60px] text-center xl:text-left"
               >
                 <h3 className="text-6xl font-extrabold text-white drop-shadow-lg">
                   {skills.title}
                 </h3>
-                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg mb-8">
+                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg">
                   {skills.description}
                 </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                  {skills.skillList.map((skill, index) => (
-                    <motion.div
-                      key={index}
-                      className="flex items-center space-x-4 p-4 bg-gray-700 rounded-lg shadow-lg transform transition-transform hover:scale-110"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.9 }}
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                    >
-                      <div className="text-3xl text-white">{skill.icon}</div>
-                      <p className="text-sm text-gray-100">{skill.name}</p>
-                    </motion.div>
-                  ))}
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-gray-800 p-8 rounded-lg shadow-2xl"
+                >
+                  <ul className="grid grid-cols-2 gap-[30px] md:grid-cols-4 lg:grid-cols-4">
+                    {skills.skillList.map((skill, index) => (
+                      <motion.li
+                        key={index}
+                        className="flex flex-col items-center text-white"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.3 }}
+                      >
+                        <div className="text-4xl">{skill.icon}</div>
+                        <span className="text-lg">{skill.name}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
               </motion.div>
             </TabsContent>
 
+            {/* About Tab */}
             <TabsContent value="about">
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gray-800 p-8 rounded-lg shadow-2xl"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 50 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="flex flex-col gap-[60px] text-center xl:text-left"
               >
                 <h3 className="text-6xl font-extrabold text-white drop-shadow-lg">
                   {about.title}
                 </h3>
-                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg mb-8">
+                <p className="max-w-[600px] text-white/90 mx-auto xl:mx-0 text-lg">
                   {about.description}
                 </p>
-                <motion.ul
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="space-y-4"
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -30 }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-gray-800 p-8 rounded-lg shadow-2xl"
                 >
-                  {about.info.map((item, index) => (
-                    <motion.li
-                      key={index}
-                      className="flex justify-between text-gray-300"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 }}
-                    >
-                      <span className="font-bold text-gray-100">
-                        {item.fieldName}:
-                      </span>
-                      <span>{item.fieldValue}</span>
-                    </motion.li>
-                  ))}
-                </motion.ul>
+                  <ul className="space-y-6">
+                    {about.info.map((item, index) => (
+                      <motion.li
+                        key={index}
+                        className="flex justify-between text-lg text-white"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.3 }}
+                      >
+                        <span className="font-bold">{item.fieldName}:</span>
+                        <span className="text-gray-300">{item.fieldValue}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
               </motion.div>
             </TabsContent>
           </div>
