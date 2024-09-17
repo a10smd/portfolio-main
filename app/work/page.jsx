@@ -29,6 +29,7 @@ const projects = [
       { name: "Tailwind CSS" },
       { name: "Node js" },
     ],
+    image: "/assets/work/thumb1.png",
     live: "https://emirates-delight.vercel.app/",
     github: "https://github.com/a10smd/emirates-delight",
   },
@@ -39,6 +40,7 @@ const projects = [
     description:
       "Admin Panel is a web application that allows users to manage their data.",
     stack: [{ name: "Next.js" }, { name: "React" }, { name: "Tailwind CSS" }],
+    image: "/assets/work/thumb2.png",
     live: "",
     github: "https://github.com/a10smd/Admin-panel",
   },
@@ -46,10 +48,22 @@ const projects = [
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
+
+  const handleSlideChange = (swiper) => {
+    // get current slide index
+    const currentIndex = swiper.activeIndex;
+
+    // set current project
+    setProject(projects[currentIndex]);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+      }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
@@ -120,7 +134,24 @@ const Work = () => {
               onSlideChange={handleSlideChange}
             >
               {projects.map((project, index) => {
-                return <SwiperSlide key={index}>slide</SwiperSlide>;
+                return (
+                  <SwiperSlide key={index} className="w-full">
+                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                      {/* overlay */}
+                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+
+                      {/* image */}
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={project.image}
+                          fill
+                          alt={project.title}
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
               })}
             </Swiper>
           </div>
