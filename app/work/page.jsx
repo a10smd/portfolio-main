@@ -54,7 +54,9 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full">text</div>
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+            text
+          </div>
           <div className="w-full">slider</div>
         </div>
       </div>
