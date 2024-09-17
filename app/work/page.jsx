@@ -80,7 +80,7 @@ const Work = () => {
             {/* border */}
             <div className="w-full h-[1px] bg-white/20"></div>
             {/* buttons */}
-            <div>
+            <div className="flex items-center gap-4">
               {/* live project button */}
               <Link href={project.live}>
                 <TooltipProvider delayDuration={100}>
