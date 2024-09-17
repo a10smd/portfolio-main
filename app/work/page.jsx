@@ -46,7 +46,11 @@ const projects = [
 
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
-  return <div>Work</div>;
+  return (
+    <motion.div>
+      <div className="container mx-auto"></div>
+    </motion.div>
+  );
 };
 
 export default Work;
