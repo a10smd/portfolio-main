@@ -71,6 +71,7 @@ const Work = () => {
                 return (
                   <li key={index} className="text-xl text-green-400">
                     {item.name}
+                    {/* remove last comma */}
                     {index !== project.stack.length - 1 && ","}
                   </li>
                 );
