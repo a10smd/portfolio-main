@@ -119,7 +119,7 @@ const Work = () => {
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((item, index) => {
+              {projects.map((project, index) => {
                 return <SwiperSlide key={index}>slide</SwiperSlide>;
               })}
             </Swiper>
