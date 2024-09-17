@@ -77,6 +77,10 @@ const Work = () => {
                 );
               })}
             </ul>
+            {/* border */}
+            <div className="w-full h-[1px] bg-white/20"></div>
+            {/* buttons */}
+            <div></div>
           </div>
           <div className="w-full">slider</div>
         </div>
