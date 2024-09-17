@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
   Tooltip,
   TooltipContent,
@@ -81,13 +81,28 @@ const Work = () => {
             <div className="w-full h-[1px] bg-white/20"></div>
             {/* buttons */}
             <div>
-              <Link href={project.github}>
-                <TooltipProvider>
+              {/* live project button */}
+              <Link href={project.live}>
+                <TooltipProvider delayDuration={100}>
                   <Tooltip>
-                    <TooltipTrigger>
-                      <BsArrowUpRight />
+                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <BsArrowUpRight className="text-white group-hover:text-green-400 text-3xl" />
                       <TooltipContent>
-                        <p>Live project</p>
+                        <p>Live Project</p>
+                      </TooltipContent>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+
+              {/* github repo button */}
+              <Link href={project.github}>
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <BsGithub className="text-white group-hover:text-green-400 text-3xl" />
+                      <TooltipContent>
+                        <p>Github Repo</p>
                       </TooltipContent>
                     </TooltipTrigger>
                   </Tooltip>
