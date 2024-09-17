@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
   {
@@ -153,6 +154,7 @@ const Work = () => {
                   </SwiperSlide>
                 );
               })}
+              <WorkSliderBtns />
             </Swiper>
           </div>
         </div>
