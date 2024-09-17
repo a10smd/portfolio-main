@@ -63,6 +63,10 @@ const Work = () => {
             <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-green-400 transition-all duration-500 capitalize ">
               {project.category} project
             </h2>
+            {/* project description */}
+            <p className="text-white/60">{project.description}</p>
+            {/* project stack */}
+            <ul></ul>
           </div>
           <div className="w-full">slider</div>
         </div>
