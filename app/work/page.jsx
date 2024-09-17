@@ -66,7 +66,16 @@ const Work = () => {
             {/* project description */}
             <p className="text-white/60">{project.description}</p>
             {/* project stack */}
-            <ul></ul>
+            <ul className="flex gap-4">
+              {project.stack.map((item, index) => {
+                return (
+                  <li key={index} className="text-xl text-green-400">
+                    {item.name}
+                    {index !== project.stack.length - 1 && ","}
+                  </li>
+                );
+              })}
+            </ul>
           </div>
           <div className="w-full">slider</div>
         </div>
