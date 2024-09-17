@@ -80,7 +80,20 @@ const Work = () => {
             {/* border */}
             <div className="w-full h-[1px] bg-white/20"></div>
             {/* buttons */}
-            <div></div>
+            <div>
+              <Link href={project.github}>
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <BsArrowUpRight />
+                      <TooltipContent>
+                        <p>Live project</p>
+                      </TooltipContent>
+                    </TooltipTrigger>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+            </div>
           </div>
           <div className="w-full">slider</div>
         </div>
