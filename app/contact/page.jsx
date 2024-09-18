@@ -62,6 +62,12 @@ const Contact = () => {
                 <Input type="email" placeholder="Email" />
                 <Input type="phone" placeholder="Phone" />
               </div>
+              {/* Select */}
+              <Select>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a Service" />
+                </SelectTrigger>
+              </Select>
             </form>
           </div>
           {/* info */}
