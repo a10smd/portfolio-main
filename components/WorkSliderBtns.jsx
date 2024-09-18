@@ -1,3 +1,5 @@
+"use client";
+
 const WorkSliderBtns = () => {
   return <div>WorkSliderBtns</div>;
 };
