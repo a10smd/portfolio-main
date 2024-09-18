@@ -18,17 +18,17 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const info = [
   {
-    icon: <FaPhoneAlt />,
+    icon: <FaPhoneAlt className="text-green-400 text-2xl" />,
     title: "Phone",
     description: "(+971) 054 578 9975",
   },
   {
-    icon: <FaEnvelope />,
+    icon: <FaEnvelope className="text-green-400 text-2xl" />,
     title: "Email",
     description: "abdussamada11d8@gmail.com",
   },
   {
-    icon: <FaMapMarkerAlt />,
+    icon: <FaMapMarkerAlt className="text-green-400 text-2xl" />,
     title: "Location",
     description: "Sharjah, UAE",
   },
@@ -81,11 +81,25 @@ const Contact = () => {
                 className="h-[200px]"
                 placeholder="Type Your Message Here"
               />
+              {/* button */}
+              <Button size="md" className="mx-w-40">
+                Send Message
+              </Button>
             </form>
           </div>
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            info
+            <div className="flex flex-col gap-6 text-white">
+              {info.map((item, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  {item.icon}
+                  <div>
+                    <h4 className="text-lg font-medium">{item.title}</h4>
+                    <p className="text-white/60">{item.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
