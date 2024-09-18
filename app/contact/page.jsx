@@ -52,7 +52,6 @@ const Contact = () => {
           <div className="xl:h-[54%] order-2 xl:order-none">
             <form>form</form>
           </div>
-
           {/* info */}
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             info
