@@ -67,6 +67,14 @@ const Contact = () => {
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a Service" />
                 </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Select a Service</SelectLabel>
+                    <SelectItem value="est">Web Development</SelectItem>
+                    <SelectItem value="cst">UI/UX Designer</SelectItem>
+                    <SelectItem value="mst">Frontend Development</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
               </Select>
             </form>
           </div>
