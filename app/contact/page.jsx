@@ -34,8 +34,10 @@ const info = [
   },
 ];
 
+import { motion } from "framer-motion";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return <motion.section>Contact</motion.section>;
 };
 
 export default Contact;
