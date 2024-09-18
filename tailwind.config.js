@@ -20,17 +20,16 @@ module.exports = {
       xl: "1280px",
     },
     fontFamily: {
-      primary: "var(--font-jetbrainsMono)",
+      primary: "var(--font-jetbrainsMono)", // Make sure this variable is defined globally
     },
     extend: {
       colors: {
         primary: "#1c1c22",
         accent: {
-          DEFAULT: "00ff99",
-          hover: "00e187",
+          DEFAULT: "#00ff99", // Added #
+          hover: "#00e187", // Added #
         },
       },
-
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
