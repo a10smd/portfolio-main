@@ -49,8 +49,13 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
-          <div>
+          <div className="xl:h-[54%] order-2 xl:order-none">
             <form>form</form>
+          </div>
+
+          {/* info */}
+          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
+            info
           </div>
         </div>
       </div>
