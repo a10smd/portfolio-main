@@ -14,6 +14,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 const Contact = () => {
   return <div>Contact</div>;
 };
