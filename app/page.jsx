@@ -18,7 +18,7 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Engineer</span>
             <h1 className="h1">
-              Hi, I'm <br />
+              Hi, Im <br />
               <span className="text-green-400">
                 <Typewriter
                   words={["Abdus Samad."]}
@@ -32,7 +32,7 @@ const Home = () => {
               </span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I'm a skilled Software Engineer specializing in website
+              Im a skilled Software Engineer specializing in website
               development, with proficiency in multiple technologies and
               languages.
             </p>
